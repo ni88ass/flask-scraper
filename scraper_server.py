@@ -1,3 +1,9 @@
+from flask import Flask, request, jsonify
+from crawl4ai import CrawlerHub
+
+app = Flask(__name__)
+hub = CrawlerHub()
+
 @app.route('/scrape', methods=['POST'])
 def scrape():
     data = request.get_json()
