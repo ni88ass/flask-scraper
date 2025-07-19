@@ -13,7 +13,7 @@ def scrape():
         return jsonify({"error": "URL is required"}), 400
 
       try:
-        result = hub.run(url)  # or use .execute(url) if .run doesn't exist
+        result = hub.run(url)  
         return jsonify({"scraped": result}), 200
 
     except Exception as e:
