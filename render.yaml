@@ -3,5 +3,5 @@ services:
     name: flask-scraper
     env: python
     buildCommand: ""
-    startCommand: "python scraper_server.py"
+    startCommand: "gunicorn scraper_server:app"
     plan: free
